@@ -1,0 +1,16 @@
+{
+    "name":"maverick/advanced-online-customer",
+    "type":"magento-module",
+    "license":"OSL-3.0",
+    "homepage":"https://github.com/maverick193/advanced-online-customer",
+    "description":"Magento Advanced Online Customer - Block Customers By IP",
+    "require":{
+        "magento-hackathon/magento-composer-installer": "*"
+    },
+    "authors":[
+        {
+            "name":"Mohammed NAHHAS",
+            "email":"m.nahhas@live.fr"
+        }
+    ]
+}

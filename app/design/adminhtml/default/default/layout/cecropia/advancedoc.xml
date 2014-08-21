@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Cecropia Advanced Online Customers Extension
+ *
+ * NOTICE OF LICENSE
+ *
+ *
+ * @version     0.1.0
+ * @category    Cecropia
+ * @package     Cecropia_AdvancedOC
+ * @copyright   Copyright (c) 2013
+ * @license
+ */
+
+/**
+ * Adminhtml Layout XML
+ *
+ * @category   Cecropia
+ * @package    Cecropia_AdvancedOC
+ * @author     Mohammed NAHHAS <m.nahhas@live.fr>
+ */
+ -->
+ <layout>
+	<adminhtml_ip_info>
+		<reference name="content">
+			<block type="cecropia_advancedoc/adminhtml_ip_info" name="cecropia.advancedoc.ip.info" />
+		</reference>
+	</adminhtml_ip_info>
+	
+	<!-- Blocked Ip Grid -->
+	<adminhtml_blockedip_index>
+		<reference name="content">
+            <block type="cecropia_advancedoc/adminhtml_blockedip" name="cecropia.advancedoc.blocked.ip.grid"/>
+        </reference>
+	</adminhtml_blockedip_index>
+	
+	<!-- Blocked Ip Grid Ajax Requests -->
+	<adminhtml_blockedip_grid>
+		<remove name="root"/>
+        <block type="cecropia_advancedoc/adminhtml_blockedip_grid" name="blockedip_ajax_grid" output="toHtml"/>
+	</adminhtml_blockedip_grid>
+	
+	<!-- Edit Page -->
+	<adminhtml_blockedip_edit>
+		<reference name="content">
+            <block type="cecropia_advancedoc/adminhtml_blockedip_edit" name="cecropia_blockedip_edit"/>
+        </reference>
+	</adminhtml_blockedip_edit>
+</layout>
