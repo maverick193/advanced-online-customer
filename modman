@@ -2,6 +2,6 @@
 
 app/code/local/Cecropia/AdvancedOC app/code/local/Cecropia/AdvancedOC
 app/etc/modules/Cecropia_AdvancedOC.xml app/etc/modules/Cecropia_AdvancedOC.xml
-app/design/adminhtml/base/default/layout/cecropia/advancedoc.xml    app/design/adminhtml/base/default/layout/cecropia/advancedoc.xml
+app/design/adminhtml/default/default/layout/cecropia/advancedoc.xml    app/design/adminhtml/default/default/layout/cecropia/advancedoc.xml
 app/design/adminhtml/default/default/template/cecropia/advancedoc/ip/info.phtml	app/design/adminhtml/default/default/template/cecropia/advancedoc/ip/info.phtml
 skin/adminhtml/default/default/images/cecropia/advancedoc/flags	skin/adminhtml/default/default/images/cecropia/advancedoc/flags
