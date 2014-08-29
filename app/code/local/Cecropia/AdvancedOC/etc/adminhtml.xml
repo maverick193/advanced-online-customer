@@ -45,6 +45,18 @@
                             </blockedip>
                         </children>
                     </customer>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <advancedoc translate="title" module="maverick_crawler">
+                                        <title>Advanced Online Customers</title>
+                                        <sort_order>20</sort_order>
+                                    </advancedoc>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
                 </children>
             </admin>
         </resources>

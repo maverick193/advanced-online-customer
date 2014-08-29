@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Cecropia Advanced Online Customers Extension
+ *
+ * NOTICE OF LICENSE
+ *
+ *
+ * @version     0.1.0
+ * @category    Cecropia
+ * @package     Cecropia_AdvancedOC
+ * @copyright   Copyright (c) 2013
+ * @license
+ */
+
+/**
+ * System XML
+ *
+ * @category   Cecropia
+ * @package    Cecropia_AdvancedOC
+ * @author     Mohammed NAHHAS <m.nahhas@live.fr>
+ */
+ -->
+<config>
+    <tabs>
+        <cecropia translate="label">
+            <label>Cecropia Extensions</label>
+            <sort_order>111</sort_order>
+        </cecropia>
+    </tabs>
+    <sections>
+        <advancedoc translate="label" module="cecropia_advancedoc">
+            <label>Advanced Online Customers</label>
+            <tab>cecropia</tab>
+            <sort_order>20</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>0</show_in_website>
+            <show_in_store>0</show_in_store>
+            <groups>
+                <!-- Automatic IP blocking rules -->
+                <blocking_rules translate="label" module="cecropia_advancedoc">
+                    <label>Automatic IP Blocking Rules</label>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <enabled translate="label comment">
+                            <label>Enable Automatic Blocking</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <comment>If enabled, based on rules defined, IP will be blocked automatically</comment>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </enabled>
+                        <max_per_day translate="label comment">
+                            <label>Maximum Connection Per Day</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>Beyond this value, IP will be considered as suspicious</comment>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </max_per_day>
+                        <max_at_once translate="label comment">
+                            <label>Maximum number of simultaneous connections</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>Beyond this value, IP will be considered as suspicious</comment>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </max_at_once>
+                        <whitelist translate="label comment">
+                            <label>IP White List</label>
+                            <frontend_type>textarea</frontend_type>
+                            <comment>Only one IP per line, Automatic IP blocking rules are not applicable on this list</comment>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </whitelist>
+                    </fields>
+                </blocking_rules>
+            </groups>
+        </advancedoc>
+    </sections>
+</config>

@@ -104,6 +104,7 @@ class Cecropia_AdvancedOC_Block_Adminhtml_Customer_Online_Grid
 				'width' 	=> '160px',
 				'renderer'  => 'cecropia_advancedoc/adminhtml_customer_online_grid_renderer_geoloc',
 				'filter'    => false,
+                'sortable'  => false,
 				'sort'      => false
 		));
 		

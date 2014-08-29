@@ -21,47 +21,47 @@
  * @author     Mohammed NAHHAS <m.nahhas@live.fr>
  */
  -->
- <config>
- 	<modules>
- 		<Cecropia_AdvancedOC>
- 			<version>0.1.0</version>
- 		</Cecropia_AdvancedOC>
- 	</modules>
- 	<global>
- 		<blocks>
+<config>
+    <modules>
+        <Cecropia_AdvancedOC>
+            <version>0.1.0</version>
+        </Cecropia_AdvancedOC>
+    </modules>
+    <global>
+        <blocks>
             <!-- Block ClassGroup -->
- 			<cecropia_advancedoc>
- 				<class>Cecropia_AdvancedOC_Block</class>
- 			</cecropia_advancedoc>
- 			<adminhtml>
-            	<rewrite>
-	            	<customer_online_grid>Cecropia_AdvancedOC_Block_Adminhtml_Customer_Online_Grid</customer_online_grid>
-	            </rewrite>
+            <cecropia_advancedoc>
+                <class>Cecropia_AdvancedOC_Block</class>
+            </cecropia_advancedoc>
+            <adminhtml>
+                <rewrite>
+                    <customer_online_grid>Cecropia_AdvancedOC_Block_Adminhtml_Customer_Online_Grid</customer_online_grid>
+                </rewrite>
             </adminhtml>
- 		</blocks>
- 		<helpers>
+        </blocks>
+        <helpers>
             <!-- Helper ClassGroup -->
- 			<cecropia_advancedoc>
- 				<class>Cecropia_AdvancedOC_Helper</class>
- 			</cecropia_advancedoc>
- 		</helpers>
- 		<!-- Model & Resource Model -->
-		<models>
-			<cecropia_advancedoc>
-				<class>Cecropia_AdvancedOC_Model</class>
-				<resourceModel>cecropia_advancedoc_resource</resourceModel>
-			</cecropia_advancedoc>
-			<cecropia_advancedoc_resource>
-			    <class>Cecropia_AdvancedOC_Model_Resource</class>
+            <cecropia_advancedoc>
+                <class>Cecropia_AdvancedOC_Helper</class>
+            </cecropia_advancedoc>
+        </helpers>
+        <!-- Model & Resource Model -->
+        <models>
+            <cecropia_advancedoc>
+                <class>Cecropia_AdvancedOC_Model</class>
+                <resourceModel>cecropia_advancedoc_resource</resourceModel>
+            </cecropia_advancedoc>
+            <cecropia_advancedoc_resource>
+                <class>Cecropia_AdvancedOC_Model_Resource</class>
                 <entities>
                     <blockedip>
                         <table>cecropia_blocked_ip</table>
                     </blockedip>
                 </entities>
-			</cecropia_advancedoc_resource>
-		</models>
+            </cecropia_advancedoc_resource>
+        </models>
         <!-- Setup Resources -->
-		<resources>
+        <resources>
             <cecropia_advancedoc_setup>
                 <setup>
                     <module>Cecropia_AdvancedOC</module>
@@ -69,8 +69,8 @@
                 </setup>
             </cecropia_advancedoc_setup>
         </resources>
- 	</global>
- 	<admin>
+    </global>
+    <admin>
         <routers>
             <adminhtml>
                 <args>
@@ -82,13 +82,13 @@
         </routers>
     </admin>
     <adminhtml>
-    	<layout>
-			<updates>
-				<cecropia_advancedoc>
-					<file>cecropia/advancedoc.xml</file>
-				</cecropia_advancedoc>
-			</updates>
-		</layout>
+        <layout>
+            <updates>
+                <cecropia_advancedoc>
+                    <file>cecropia/advancedoc.xml</file>
+                </cecropia_advancedoc>
+            </updates>
+        </layout>
     </adminhtml>
     <frontend>
         <events>
@@ -103,4 +103,13 @@
             </controller_action_predispatch>
         </events>
     </frontend>
- </config>
+    <default>
+        <advancedoc>
+            <blocking_rules>
+                <enabled>0</enabled>
+                <max_per_day>50</max_per_day>
+                <max_at_once>10</max_at_once>
+            </blocking_rules>
+        </advancedoc>
+    </default>
+</config>
